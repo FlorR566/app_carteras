@@ -49,17 +49,15 @@
 		top: 70px;
 		right: 0;
 		flex-direction: column;
-		background-color: #111;
+		background-color: #111111;
 		width: 100%;
 		padding: 1rem 0;
+		padding-left: 15px;
 		gap: 1rem;
-
-		/* oculto por defecto */
-		display: none;
+		display: none; /* oculto por defecto */
 	}
 
-	/* cuando está abierto */
 	.nav-links.open {
-		display: flex;
+		display: flex; /* cuando está abierto */
 	}
 }
