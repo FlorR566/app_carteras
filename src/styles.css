@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+	box-sizing: border-box;
+	transition: color 0.3s ease;
+}
+
+body {
+	margin: 0px;
+}
+
+html {
+	line-height: 1.5;
+	font-synthesis: none; /* bloquea que el navegador artificialmente versiones en negrita o italic si no se encuentran en la fuente*/
+	text-rendering: optimizeLegibility; /* El navegador prioriza la legibilidad del texto, mejora el kerning (espaciado entre letras) */
+	-webkit-font-smoothing: antialiased; /* Suaviza bordes, letras más nítidas, especialmente en macOS */
+	-moz-osx-font-smoothing: grayscale; /* Mejora cómo se ven las fuentes en Macs usando Firefox. */
+	-webkit-text-size-adjust: 100%; /* Control total del tamaño de fuente en móviles, de lo contrario Zafari podría aumentar el tamaño si cree que es muy pequeño */
+}
+
+.aviso {
+	width: 200px;
+	background-color: yellowgreen;
+}
