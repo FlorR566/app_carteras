@@ -1,38 +1,52 @@
 /* --- NAVBAR GENERAL --- */
+:root {
+	--color-fondo: #111;
+	--color-letrasPrimario: #fff;
+	--color-letrasSecundario: #a39e9e;
+	--color-iconHover: #cfcd65;
+}
+
 .navbar {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 1rem 2rem;
-	background-color: #111;
-	color: #fff;
+	color: var(--color-letrasPrimario);
+	background-color: var(--color-fondo);
 }
 
 /* Logo */
-.nav-logo {
+.navLogo {
 	font-size: 1.4rem;
 	font-weight: bold;
 }
 
+.ralewayTextLogo {
+	font-family: "Raleway", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
 /* Links desktop */
-.nav-links {
+.navLinks {
 	display: flex;
 	gap: 1.5rem;
 	list-style: none;
 }
 
-.nav-links a {
-	color: white;
+.navLinks a {
+	color: var(--color-letrasPrimario);
 	text-decoration: none;
 	font-size: 1rem;
 }
 
-.nav-links a:hover {
+.navLinks a:hover {
 	text-decoration: underline;
 }
 
 /* Toggle (hamburguesa) para MOBILE */
-.nav-toggle {
+.navToggle {
 	display: none;
 	font-size: 2rem;
 	cursor: pointer;
@@ -40,16 +54,16 @@
 
 /* --- MOBILE --- */
 @media (max-width: 768px) {
-	.nav-toggle {
+	.navToggle {
 		display: block;
 	}
 
-	.nav-links {
+	.navLinks {
 		position: absolute;
 		top: 70px;
 		right: 0;
 		flex-direction: column;
-		background-color: #111111;
+		background-color: var(--color-fondo);
 		width: 100%;
 		padding: 1rem 0;
 		padding-left: 15px;
@@ -57,7 +71,7 @@
 		display: none; /* oculto por defecto */
 	}
 
-	.nav-links.open {
+	.navLinks.open {
 		display: flex; /* cuando está abierto */
 	}
 }

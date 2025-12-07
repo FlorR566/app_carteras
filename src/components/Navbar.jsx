@@ -1,18 +1,20 @@
 import { useState } from "react";
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<nav className="navbar">
-			<div className="nav-logo">Lady Valentina</div>
+		<nav className={styles.navbar}>
+			<div className={`${styles.navLogo} ${styles.ralewayTextLogo}`}>
+				Lady Valentina
+			</div>
 
-			<div className="nav-toggle" onClick={() => setOpen(!open)}>
+			<div className={[styles.navToggle]} onClick={() => setOpen(!open)}>
 				☰
 			</div>
 
-			<ul className={`nav-links ${open ? "open" : ""}`}>
+			<ul className={`${styles.navLinks} ${open ? styles.open : ""}`}>
 				<li>
 					<a href="#home">Inicio</a>
 				</li>
