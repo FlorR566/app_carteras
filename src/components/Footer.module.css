@@ -7,14 +7,13 @@
 
 @media (max-width: 768px) {
 	.footer {
-		border-top: 10px solid var(--color-letrasSecundario);
-		position: absolute;
-		bottom: 0;
-		padding: 1.5rem 1.5rem;
-		background-color: var(--color-fondo);
-		color: var(--color-letrasPrimario);
 		width: 100%;
 		height: 11rem;
+		padding: 1.5rem;
+		margin-top: auto;
+		border-top: 10px solid var(--color-letrasSecundario);
+		background-color: var(--color-fondo);
+		color: var(--color-letrasPrimario);
 	}
 
 	.ralewayTextFooter {
