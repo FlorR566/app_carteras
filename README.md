@@ -1,4 +1,4 @@
-# **👜 Carteras App (en desarrollo)**
+# **👜 App Carteras (en desarrollo)**
 
 Aplicación web desarrollada con React + Vite para visualizar y administrar diferentes modelos de carteras. Pensada como un proyecto moderno, rápido y fácil de mantener.
 
