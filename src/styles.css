@@ -4,7 +4,7 @@
 
 html,
 body {
-	height: 100dvh;
+	min-height: 100dvh;
 	margin: 0px;
 	padding: 0px;
 	line-height: 1.5;
@@ -21,7 +21,6 @@ body {
 
 .mainContent {
 	flex: 1;
-	z-index: 300;
 }
 
 .aviso {
