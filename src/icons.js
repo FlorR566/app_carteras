@@ -27,13 +27,13 @@ const socialIcons = [
 		href: "https://instagram.com",
 		Icon: FaInstagram,
 	},
-	{
-		id: 4,
-		target: "_blank",
-		rel: "noopener noreferrer",
-		href: "https://linkedin.com",
-		Icon: FaLinkedinIn,
-	},
+	// {
+	// 	id: 4,
+	// 	target: "_blank",
+	// 	rel: "noopener noreferrer",
+	// 	href: "https://linkedin.com",
+	// 	Icon: FaLinkedinIn,
+	// },
 ];
 
 export default socialIcons;
