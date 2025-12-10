@@ -1,24 +1,28 @@
 * {
 	box-sizing: border-box;
-	transition: color 0.3s ease;
+	/* transition: color 0.3s ease; */
 }
 
 html,
 body {
-	height: 100%;
+	height: 100dvh;
 	margin: 0px;
 	padding: 0px;
 	line-height: 1.5;
+	font-family: "Raleway", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
 	font-synthesis: none; /* bloquea que el navegador artificialmente versiones en negrita o italic si no se encuentran en la fuente*/
 	text-rendering: optimizeLegibility; /* El navegador prioriza la legibilidad del texto, mejora el kerning (espaciado entre letras) */
 	-webkit-font-smoothing: antialiased; /* Suaviza bordes, letras más nítidas, especialmente en macOS */
 	-moz-osx-font-smoothing: grayscale; /* Mejora cómo se ven las fuentes en Macs usando Firefox. */
 	-webkit-text-size-adjust: 100%; /* Control total del tamaño de fuente en móviles, de lo contrario Zafari podría aumentar el tamaño si cree que es muy pequeño */
-	-webkit-font-smoothing: antialiased; /* Sirve para suavizar los bordes irregulares en imágenes digitales */
 }
 
 .mainContent {
 	flex: 1;
+	z-index: 300;
 }
 
 .aviso {
