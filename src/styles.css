@@ -1,6 +1,5 @@
 * {
 	box-sizing: border-box;
-	/* transition: color 0.3s ease; */
 }
 
 html,
@@ -40,6 +39,3 @@ body {
 		font-size: 11px;
 	}
 }
-
-/* --themed-foreground: #2D2D2D
---themed-background: #EAE8E4; */
