@@ -10,7 +10,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1rem 2rem;
+	padding: 1rem 6rem;
 	color: var(--color-letrasPrimario);
 	background-color: var(--color-fondo);
 	z-index: 1000;
@@ -18,7 +18,7 @@
 
 /* Logo */
 .navLogo {
-	font-size: 1.4rem;
+	font-size: 2rem;
 	font-weight: bold;
 }
 
@@ -52,6 +52,10 @@
 
 /* --- MOBILE --- */
 @media (max-width: 768px) {
+	.navbar {
+		padding: 1rem 2rem;
+	}
+
 	.navToggle {
 		display: block;
 	}
@@ -72,5 +76,10 @@
 
 	.navLinks.open {
 		display: flex; /* cuando está abierto */
+	}
+
+	.navLogo {
+		font-size: 1.4rem;
+		font-weight: bold;
 	}
 }
