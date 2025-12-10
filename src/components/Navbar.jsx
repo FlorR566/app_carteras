@@ -10,7 +10,7 @@ const Navbar = () => {
 				Lady Valentina
 			</div>
 
-			<div className={[styles.navToggle]} onClick={() => setOpen(!open)}>
+			<div className={styles.navToggle} onClick={() => setOpen(!open)}>
 				☰
 			</div>
 
