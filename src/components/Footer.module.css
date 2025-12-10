@@ -4,46 +4,106 @@
 	--color-letrasSecundario: #a39e9e;
 	--color-iconHover: #cfcd65;
 }
-
-@media (max-width: 768px) {
+@media (min-width: 769px) {
+	/* Desktop */
 	.footer {
 		width: 100%;
-		height: 11rem;
-		padding: 1.5rem;
+		height: 20rem;
+		padding: 3rem 10rem;
 		margin-top: auto;
-		border-top: 10px solid var(--color-letrasSecundario);
+		border-top: 15px solid var(--color-letrasSecundario);
 		background-color: var(--color-fondo);
 		color: var(--color-letrasPrimario);
+		z-index: 50;
 	}
 
 	.ralewayTextFooter {
-		font-family: "Raleway", sans-serif;
-		font-optical-sizing: auto;
 		font-weight: 400;
-		font-style: normal;
 	}
 
 	/* Logo */
 	.navLogo {
-		font-size: 20px;
-		height: 3rem;
-		text-align: center;
-		/* background-color: #4d4c21; */
+		font-size: 45px;
+		height: auto;
+		/* background-color: aquamarine; */
 	}
 
 	.ralewayTextLogo {
-		font-family: "Raleway", sans-serif;
-		font-optical-sizing: auto;
 		font-weight: 600;
-		font-style: normal;
+	}
+
+	.followUsDiv {
+		width: 100%;
+		height: auto;
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		justify-self: center;
+		margin-top: 20px;
+		/* background-color: #286eaa; */
+	}
+
+	.socialIcono {
+		font-size: 25px;
+		height: 1.3em;
+		width: 1.3em;
+		margin: 0px 12px;
+		color: var(--color-letrasSecundario);
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	.socialIcono:hover {
+		color: var(--color-iconHover);
+	}
+
+	.copyright {
+		color: var(--color-letrasSecundario);
+		height: auto;
+		width: 100%;
+		font-size: 12px;
+		text-align: center;
+		margin-top: 80px;
+		/* background-color: #2a571d; */
+	}
+
+	.copyright a {
+		color: var(--color-letrasSecundario);
+		text-decoration: none;
+	}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+	.footer {
+		width: 100%;
+		height: 15rem;
+		padding: 2rem 1.3rem;
+		margin-top: auto;
+		border-top: 10px solid var(--color-letrasSecundario);
+		background-color: var(--color-fondo);
+		color: var(--color-letrasPrimario);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		z-index: 5;
+	}
+
+	.ralewayTextFooter {
+		font-weight: 400;
+	}
+
+	/* Logo */
+	.ralewayTextLogo {
+		text-align: center;
+		font-weight: 600;
+		font-size: 25px;
 	}
 
 	.followUsDiv {
 		font-size: 16px;
 		display: flex;
+		justify-content: center;
 		align-items: center;
-		justify-self: center;
-		/* background-color: aquamarine; */
 	}
 
 	.socialIcono {
@@ -65,7 +125,6 @@
 		font-size: 12px;
 		text-align: center;
 		padding: 5px;
-		/* background-color: blue; */
 	}
 
 	.copyright a {

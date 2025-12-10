@@ -1,24 +1,6 @@
 import styles from "./Footer.module.css";
 import socialIcons from "../icons";
 
-const Copyright = () => {
-	return (
-		<div className={styles.copyright}>
-			<p>
-				Copyright © 2025{" "}
-				<a
-					href="https://florenciarodriguez.vercel.app/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Florencia Rodriguez
-				</a>{" "}
-				🌸
-			</p>
-		</div>
-	);
-};
-
 const SocialLinks = () => {
 	return (
 		<div className={styles.followUsDiv}>
@@ -35,6 +17,24 @@ const SocialLinks = () => {
 					<Icon className={styles.socialIcono} />
 				</a>
 			))}
+		</div>
+	);
+};
+
+const Copyright = () => {
+	return (
+		<div className={styles.copyright}>
+			<p>
+				Copyright © 2025{" "}
+				<a
+					href="https://florenciarodriguez.vercel.app/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Florencia Rodriguez
+				</a>{" "}
+				🌸
+			</p>
 		</div>
 	);
 };
