@@ -1,20 +1,22 @@
 /* --- NAVBAR GENERAL --- */
 :root {
-	--color-fondo: #111;
-	--color-letrasPrimario: #fff;
-	--color-letrasSecundario: #a39e9e;
+	--color-fondo: #fff;
+	--color-letrasPrimario: #111;
+	--color-letrasSecundario: #656262;
 	--color-iconHover: #cfcd65;
 }
 
 .navbar {
+	position: fixed;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0rem 6rem;
-	color: var(--color-letrasPrimario);
-	background-color: var(--color-fondo);
-	z-index: 1000;
 	max-height: 4rem;
+	background-color: var(--color-fondo);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
 }
 
 /* Logo */
@@ -32,7 +34,7 @@
 }
 
 .imgLogo {
-	border-radius: 8px;
+	border-radius: 18px;
 	max-height: 2.5rem;
 }
 

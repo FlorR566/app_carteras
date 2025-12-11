@@ -1,9 +1,10 @@
 :root {
-	--color-fondo: #111;
-	--color-letrasPrimario: #fff;
-	--color-letrasSecundario: #a39e9e;
+	--color-fondo: #fff;
+	--color-letrasPrimario: #111;
+	--color-letrasSecundario: #656262;
 	--color-iconHover: #cfcd65;
 }
+
 @media (min-width: 769px) {
 	/* Desktop */
 	.footer {
@@ -11,7 +12,8 @@
 		height: 20rem;
 		padding: 3rem 10rem;
 		margin-top: auto;
-		border-top: 15px solid var(--color-letrasSecundario);
+		/* border-top: 15px solid var(--color-letrasSecundario); */
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 		background-color: var(--color-fondo);
 		color: var(--color-letrasPrimario);
 		z-index: 50;
@@ -25,7 +27,6 @@
 	.navLogo {
 		font-size: 35px;
 		height: auto;
-		/* background-color: aquamarine; */
 	}
 
 	.ralewayTextLogo {
@@ -40,7 +41,6 @@
 		align-items: center;
 		justify-self: center;
 		margin-top: 20px;
-		/* background-color: #286eaa; */
 	}
 
 	.socialIcono {
@@ -63,7 +63,6 @@
 		font-size: 12px;
 		text-align: center;
 		margin-top: 80px;
-		/* background-color: #2a571d; */
 	}
 
 	.copyright a {
@@ -83,13 +82,14 @@
 		height: 15rem;
 		padding: 2rem 1.3rem;
 		margin-top: auto;
-		border-top: 10px solid var(--color-letrasSecundario);
+		/* border-top: 10px solid var(--color-letrasSecundario); */
 		background-color: var(--color-fondo);
 		color: var(--color-letrasPrimario);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		z-index: 5;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	}
 
 	.ralewayTextFooter {
