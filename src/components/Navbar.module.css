@@ -10,20 +10,31 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1rem 6rem;
+	padding: 0rem 6rem;
 	color: var(--color-letrasPrimario);
 	background-color: var(--color-fondo);
 	z-index: 1000;
+	max-height: 4rem;
 }
 
 /* Logo */
-.navLogo {
-	font-size: 2rem;
-	font-weight: bold;
+.containerLogo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	max-height: 4rem;
+}
+
+.imgLogo {
+	border-radius: 8px;
+	max-height: 2.5rem;
 }
 
 .ralewayTextLogo {
+	font-size: 2rem;
 	font-weight: 600;
+	height: 100%;
 }
 
 /* Links desktop */
@@ -41,23 +52,31 @@
 
 .navLinks a:hover {
 	text-decoration: underline;
+	color: #65a3cf;
 }
 
-/* Toggle (hamburguesa) para MOBILE */
 .navToggle {
 	display: none;
-	font-size: 2rem;
-	cursor: pointer;
 }
 
 /* --- MOBILE --- */
 @media (max-width: 768px) {
 	.navbar {
-		padding: 1rem 2rem;
+		padding: 2.5rem 2rem;
 	}
 
+	.containerLogo {
+		gap: 10px;
+	}
+
+	/* Toggle (hamburguesa) */
 	.navToggle {
 		display: block;
+		font-size: 1.5rem;
+		cursor: pointer;
+		border: none;
+		color: var(--color-letrasPrimario);
+		background-color: var(--color-fondo);
 	}
 
 	.navLinks {
@@ -66,6 +85,7 @@
 		z-index: 999;
 		right: 0;
 		flex-direction: column;
+		color: var(--color-letrasPrimario);
 		background-color: var(--color-fondo);
 		width: 100%;
 		padding: 1rem 0;
@@ -78,8 +98,8 @@
 		display: flex; /* cuando está abierto */
 	}
 
-	.navLogo {
-		font-size: 1.4rem;
-		font-weight: bold;
+	.ralewayTextLogo {
+		font-size: 1.3rem;
+		font-weight: 600;
 	}
 }
