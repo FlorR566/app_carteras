@@ -43,7 +43,7 @@ const Footer = () => {
 	return (
 		<section className={`${styles.footer} ${styles.ralewayTextFooter}`}>
 			<div className={`${styles.navLogo} ${styles.ralewayTextLogo}`}>
-				Lady Valentina
+				LADY VALENTINA
 			</div>
 			<SocialLinks />
 			<Copyright />
