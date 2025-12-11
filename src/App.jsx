@@ -13,7 +13,10 @@ const imagesMobile = [img1, img2, img3, img4, img5];
 function App() {
 	return (
 		<>
-			<Navbar />
+			<div id="home">
+				<Navbar />
+			</div>
+
 			<main className="mainContent">
 				<Carousel imagesMobile={imagesMobile} />
 				<div className="aviso">

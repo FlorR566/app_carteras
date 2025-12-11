@@ -9,14 +9,16 @@ const Navbar = () => {
 
 	return (
 		<nav className={styles.navbar}>
-			<div className={styles.containerLogo}>
-				<img src={logo} className={styles.imgLogo} alt="Logo Lady Valentina" />
-				<h1 className={styles.ralewayTextLogo}>LADY VALENTINA</h1>
-			</div>
-
-			{/* <div className={styles.navToggle} onClick={() => setOpen(!open)}>
-				{statusMenu}
-			</div> */}
+			<a href="#home" className={styles.aLogo}>
+				<div className={styles.containerLogo}>
+					<img
+						src={logo}
+						className={styles.imgLogo}
+						alt="Logo Lady Valentina"
+					/>
+					<h1 className={styles.ralewayTextLogo}>LADY VALENTINA</h1>
+				</div>
+			</a>
 
 			<button
 				className={styles.navToggle}

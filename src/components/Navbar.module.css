@@ -18,6 +18,11 @@
 }
 
 /* Logo */
+.aLogo {
+	text-decoration: none;
+	color: var(--color-letrasPrimario);
+}
+
 .containerLogo {
 	display: flex;
 	justify-content: center;
