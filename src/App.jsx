@@ -22,7 +22,9 @@ function App() {
 					<h3> 2º etapa: desktop</h3>
 				</div>
 			</main>
-			<Footer />
+			<div id="contacto">
+				<Footer />
+			</div>
 		</>
 	);
 }
