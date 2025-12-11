@@ -70,6 +70,10 @@
 		color: var(--color-letrasSecundario);
 		text-decoration: none;
 	}
+
+	.copyright a:hover {
+		color: var(--color-letrasPrimario);
+	}
 }
 
 /* Mobile */
@@ -130,5 +134,9 @@
 	.copyright a {
 		color: var(--color-letrasSecundario);
 		text-decoration: none;
+	}
+
+	.copyright a:hover {
+		color: var(--color-letrasPrimario);
 	}
 }
