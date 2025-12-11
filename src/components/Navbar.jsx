@@ -13,6 +13,8 @@ const Navbar = () => {
 				<div className={styles.containerLogo}>
 					<img
 						src={logo}
+						width="45"
+						height="50"
 						className={styles.imgLogo}
 						alt="Logo Lady Valentina"
 					/>
