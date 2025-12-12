@@ -25,17 +25,17 @@ body {
 }
 
 .aviso {
-	width: 100%;
-	background-color: yellowgreen;
+	width: 20%;
+	background-color: #ffbf00;
 	text-align: center;
+	border-radius: 20px;
+	padding: 0.5rem;
+	margin: auto;
 	font-size: 10px;
 }
 
 @media (max-width: 768px) {
 	.aviso {
-		width: 100%;
-		background-color: yellowgreen;
-		text-align: center;
-		font-size: 11px;
+		width: 70%;
 	}
 }
