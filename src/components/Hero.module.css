@@ -1,0 +1,121 @@
+:root {
+	--color-fondo: #fff;
+	--color-fondoSecundario: #faf8f8;
+	--color-letrasPrimario: #111;
+	--color-letrasSecundario: #656262;
+	--color-iconHover: #cfcd65;
+}
+
+.hero {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 4rem 6rem;
+	min-height: 100dvh;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.heroContent {
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.title {
+	font-size: 3rem;
+	font-weight: 300;
+	color: var(--color-letrasSecundario);
+	line-height: 1.1;
+}
+
+.subtitle {
+	color: var(--color-letrasSecundario);
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+
+.ctaRow {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.ctaPrimary {
+	background-color: #bf9292;
+	background-color: #8a1818;
+	color: #fff;
+	padding: 0.9rem 1.8rem;
+	border-radius: 30px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: 0.3s ease;
+	border: 2px solid var(--color-letrasSecundario);
+}
+
+.ctaPrimary:hover {
+	background-color: var(--color-letrasSecundario);
+	color: var(--color-fondo);
+	font-style: bold;
+}
+
+.ctaSecondary {
+	border: 2px solid var(--color-letrasSecundario);
+	color: var(--color-letrasSecundario);
+	padding: 0.9rem 1.8rem;
+	border-radius: 30px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: 0.3s ease;
+}
+
+.ctaSecondary:hover {
+	background-color: var(--color-letrasSecundario);
+	color: var(--color-fondo);
+}
+
+.heroImageContainer {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.heroImage {
+	width: 420px;
+	border-radius: 20px;
+	object-fit: cover;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+	.hero {
+		flex-direction: column-reverse;
+		text-align: center;
+		padding: 3rem 1.5rem;
+		gap: 2rem;
+		max-height: 100dvh;
+	}
+
+	.heroContent {
+		max-height: 100dvh;
+	}
+
+	.heroImage {
+		width: 30%;
+	}
+
+	.title {
+		font-size: 2rem;
+	}
+
+	.subtitle {
+		font-size: 1rem;
+	}
+
+	.ctaRow {
+		justify-content: center;
+	}
+}
