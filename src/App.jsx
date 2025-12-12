@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 import Carousel from "./components/Carousel";
+import Footer from "./components/Footer";
 
 import img1 from "./assets/banner_photo.jpg";
 import img2 from "./assets/bolso_cuero.png";
@@ -13,9 +14,9 @@ const imagesMobile = [img1, img2, img3, img4, img5];
 function App() {
 	return (
 		<>
-			<div id="home">
-				<Navbar />
-			</div>
+			<Navbar />
+
+			<Hero />
 
 			<main className="mainContent">
 				<Carousel imagesMobile={imagesMobile} />
