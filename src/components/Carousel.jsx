@@ -106,7 +106,8 @@ const Carousel = ({ imagesMobile }) => {
 	};
 
 	return (
-		<div
+		<section
+			id="productos"
 			className={styles.carouselContainer}
 			onPointerDown={handlePointerDown}
 			onPointerMove={handlePointerMove}
@@ -138,7 +139,7 @@ const Carousel = ({ imagesMobile }) => {
 					/>
 				))}
 			</div>
-		</div>
+		</section>
 	);
 };
 
