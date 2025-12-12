@@ -1,6 +1,7 @@
 /* --- NAVBAR GENERAL --- */
 :root {
-	--color-fondo: #fff;
+	--color-fondo: #ffffff;
+	--color-fondo-secundario: #ffffffe6;
 	--color-letrasPrimario: #111;
 	--color-letrasSecundario: #656262;
 	--color-iconHover: #cfcd65;
@@ -93,7 +94,8 @@
 		right: 0;
 		flex-direction: column;
 		color: var(--color-letrasPrimario);
-		background-color: var(--color-fondo);
+		font-weight: 500;
+		background: linear-gradient(to bottom, #ffffff 0%, #f5f1e8 100%);
 		width: 100%;
 		padding: 1rem 0;
 		padding-left: 15px;
