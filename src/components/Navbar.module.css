@@ -67,7 +67,7 @@
 }
 
 /* --- MOBILE --- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 	.navbar {
 		padding: 2.5rem 2rem;
 	}
