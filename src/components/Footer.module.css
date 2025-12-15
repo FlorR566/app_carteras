@@ -1,8 +1,9 @@
 :root {
-	--color-fondo: #fff;
+	--color-fondo: #ffffff;
 	--color-letrasPrimario: #111;
 	--color-letrasSecundario: #656262;
 	--color-iconHover: #cfcd65;
+	--color-navbarHover: #a27451;
 }
 
 @media (min-width: 769px) {
@@ -60,7 +61,7 @@
 		color: var(--color-letrasSecundario);
 		height: auto;
 		width: 100%;
-		font-size: 12px;
+		font-size: 14px;
 		text-align: center;
 		margin-top: 80px;
 	}

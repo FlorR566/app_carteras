@@ -1,10 +1,11 @@
 /* --- NAVBAR GENERAL --- */
 :root {
 	--color-fondo: #ffffff;
-	--color-fondo-secundario: #ffffffe6;
+	--color-fondoSecundario: #faf8f8;
 	--color-letrasPrimario: #111;
 	--color-letrasSecundario: #656262;
 	--color-iconHover: #cfcd65;
+	--color-letrasTerciario: #a27451;
 }
 
 .navbar {
@@ -60,7 +61,7 @@
 
 .navLinks a:hover {
 	text-decoration: underline;
-	color: #65a3cf;
+	color: var(--color-letrasTerciario);
 }
 
 .navToggle {

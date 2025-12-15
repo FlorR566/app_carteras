@@ -41,7 +41,10 @@ const Copyright = () => {
 
 const Footer = () => {
 	return (
-		<section className={`${styles.footer} ${styles.ralewayTextFooter}`}>
+		<section
+			id="contacto"
+			className={`${styles.footer} ${styles.ralewayTextFooter}`}
+		>
 			<div className={`${styles.navLogo} ${styles.ralewayTextLogo}`}>
 				LADY VALENTINA
 			</div>

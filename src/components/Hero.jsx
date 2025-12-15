@@ -1,6 +1,6 @@
 import styles from "./Hero.module.css";
-import heroImgA from "../assets/negro-correas.png";
-import heroImgB from "../assets/mochila-marron.png";
+import heroImgA from "../assets/negro_correas.png";
+import heroImgB from "../assets/mochila_marron.png";
 
 const Hero = () => {
 	return (

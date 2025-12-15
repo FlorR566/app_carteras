@@ -1,9 +1,10 @@
 :root {
-	--color-fondo: #fff;
+	--color-fondo: #ffffff;
 	--color-fondoSecundario: #faf8f8;
 	--color-letrasPrimario: #111;
 	--color-letrasSecundario: #656262;
 	--color-iconHover: #cfcd65;
+	--color-letrasTerciario: #a27451;
 }
 
 .hero {
@@ -83,8 +84,9 @@
 
 .heroImage {
 	width: 420px;
-	border-radius: 20px;
+	border-radius: 6px;
 	object-fit: cover;
+	object-fit: contain;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
