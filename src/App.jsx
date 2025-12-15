@@ -15,9 +15,7 @@ function App() {
 	return (
 		<>
 			<Navbar />
-
 			<Hero />
-
 			<main className="mainContent">
 				<Carousel imagesMobile={imagesMobile} />
 				<div className="aviso">
