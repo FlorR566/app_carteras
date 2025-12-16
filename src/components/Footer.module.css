@@ -3,7 +3,7 @@
 	--color-letrasPrimario: #111;
 	--color-letrasSecundario: #656262;
 	--color-iconHover: #cfcd65;
-	--color-navbarHover: #a27451;
+	--color-letrasTerciario: #a27451;
 }
 
 @media (min-width: 769px) {
@@ -54,7 +54,7 @@
 	}
 
 	.socialIcono:hover {
-		color: var(--color-iconHover);
+		color: var(--color-letrasTerciario);
 	}
 
 	.copyright {
@@ -121,7 +121,7 @@
 	}
 
 	.socialIcono:hover {
-		color: var(--color-iconHover);
+		color: var(--color-letrasTerciario);
 	}
 
 	.copyright {

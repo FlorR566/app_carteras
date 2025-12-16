@@ -11,13 +11,10 @@
 	text-align: center;
 	font-size: 2rem;
 	font-weight: 400;
-	margin-top: 4rem;
-	/* background-color: blue; */
 }
 
 .products {
-	padding-top: 140px;
-	/* background-color: aqua; */
+	padding-top: 1rem;
 }
 
 .cardsContainer {
@@ -34,12 +31,13 @@
 	background: var(--color-fondo);
 	padding: 1rem;
 	text-align: center;
+	border-radius: 6px;
 	/* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
-	/* border-radius: 8px; */
 }
 
 .card:hover {
 	border: 2px solid var(--color-letrasTerciario);
+	background-color: #f4dac7;
 	/* background-color: #e4b897; */
 }
 
@@ -48,6 +46,7 @@
 	height: 200px;
 	object-fit: cover;
 	overflow: hidden;
+	border-radius: 6px;
 }
 
 .card h3 {
