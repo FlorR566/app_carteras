@@ -5,7 +5,6 @@ import Carousel from "./components/Carousel";
 import CardsContainer from "./components/CardsContainer";
 import Footer from "./components/Footer";
 
-import images from "./images.js";
 import bagService from "./services/bags.js";
 
 function App() {
@@ -30,7 +29,7 @@ function App() {
 			<Hero />
 			<main className="mainContent">
 				<Carousel bags={bags} />
-				<CardsContainer images={images} />
+				<CardsContainer bags={bags} />
 				{/* Aviso de página en progreso */}
 				<div className="aviso">
 					<h1>Página en desarrollo</h1>
