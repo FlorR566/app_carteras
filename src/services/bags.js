@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:3001/api/products";
+const baseUrl = "https://lady-valentina-backend.onrender.com/api/products";
 
 const getAll = () => {
 	const request = axios.get(baseUrl);
