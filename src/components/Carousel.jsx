@@ -34,7 +34,7 @@ function Arrow({ left, onActivate }) {
 	);
 }
 
-const Carousel = ({ imagesMobile }) => {
+const Carousel = ({ bags }) => {
 	const [index, setIndex] = useState(0);
 
 	const blockSwipe = useRef(false);
@@ -43,10 +43,12 @@ const Carousel = ({ imagesMobile }) => {
 	const currentX = useRef(0);
 	const threshold = 50;
 
-	const next = () =>
-		setIndex((i) => (i === imagesMobile.length - 1 ? 0 : i + 1));
-	const prev = () =>
-		setIndex((i) => (i === 0 ? imagesMobile.length - 1 : i - 1));
+	if (!bags || bags.length === 0) {
+		return <p>Cargando carteras...</p>;
+	}
+
+	const next = () => setIndex((i) => (i === bags.length - 1 ? 0 : i + 1));
+	const prev = () => setIndex((i) => (i === 0 ? bags.length - 1 : i - 1));
 
 	const handlePrev = () => {
 		blockSwipe.current = true;
@@ -123,14 +125,19 @@ const Carousel = ({ imagesMobile }) => {
 					className={styles.carouselTrack}
 					style={{ transform: `translateX(-${index * 100}%)` }}
 				>
-					{imagesMobile.map((src, i) => (
-						<img key={i} src={src} alt="" className={styles.carouselImage} />
+					{bags.map((bag) => (
+						<img
+							key={bag.id}
+							src={bag.images[0]}
+							alt={bag.name}
+							className={styles.carouselImage}
+						/>
 					))}
 				</div>
 			</div>
 
 			<div className={styles.carouselDots}>
-				{imagesMobile.map((_, i) => (
+				{bags.map((_, i) => (
 					<div
 						key={i}
 						className={`${styles.carouselDot} ${
