@@ -6,13 +6,13 @@ import {
 } from "react-icons/fa";
 
 const socialIcons = [
-	{
-		id: 1,
-		target: "_blank",
-		rel: "noopener noreferrer",
-		href: "https://facebook.com",
-		Icon: FaFacebookF,
-	},
+	// {
+	// 	id: 1,
+	// 	target: "_blank",
+	// 	rel: "noopener noreferrer",
+	// 	href: "https://facebook.com",
+	// 	Icon: FaFacebookF,
+	// },
 	{
 		id: 2,
 		target: "_blank",
