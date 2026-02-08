@@ -9,7 +9,7 @@ const Card = ({ bags, category }) => {
 						<img src={item.images[0]} alt={item.name} />
 
 						<h3>{item.name}</h3>
-						<p>{item.price}</p>
+						<p>$ {item.price}</p>
 
 						<button className={styles.cardButton}>VER PRODUCTO</button>
 					</div>

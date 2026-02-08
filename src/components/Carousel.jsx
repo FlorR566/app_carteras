@@ -109,7 +109,7 @@ const Carousel = ({ bags }) => {
 
 	return (
 		<section
-			id="productos"
+			id="products"
 			className={styles.carouselContainer}
 			onPointerDown={handlePointerDown}
 			onPointerMove={handlePointerMove}

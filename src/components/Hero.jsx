@@ -56,10 +56,10 @@ const Hero = () => {
 
 				{/*Buttons */}
 				<div className={styles.buttonRow}>
-					<a href="#productos" className={styles.btnPrimary}>
+					<a href="#products" className={styles.btnPrimary}>
 						Ver productos
 					</a>
-					<a href="#contacto" className={styles.btnSecondary}>
+					<a href="#contact" className={styles.btnSecondary}>
 						Contactar
 					</a>
 				</div>
