@@ -75,6 +75,7 @@
 		width: 10px;
 		height: 10px;
 		border-radius: 50%;
+		background: #bbb;
 	}
 
 	.active {
@@ -85,17 +86,45 @@
 /* Mobile */
 @media (max-width: 768px) {
 	.carouselContainer {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
 		touch-action: pan-y;
 		scroll-margin-top: 20dvh;
 		justify-self: center;
 	}
 
+	.carouselTrack {
+		display: flex;
+		transition: transform 0.4s ease;
+	}
+
 	.carouselImage {
+		width: 100%;
+		flex-shrink: 0;
+		object-fit: contain;
 		object-position: center;
 		aspect-ratio: 4/5;
 	}
 
-	¡ .arrowLeft {
+	.arrow {
+		touch-action: manipulation;
+		-webkit-tap-highlight-color: transparent;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		z-index: 10;
+		opacity: 0.5;
+	}
+
+	.arrow:hover {
+		opacity: 0.9;
+	}
+
+	.arrowLeft {
 		left: 10px;
 	}
 
@@ -104,6 +133,9 @@
 	}
 
 	.carouselDots {
+		display: flex;
+		gap: 8px;
+		justify-content: center;
 		margin-top: 10px;
 	}
 
@@ -111,5 +143,9 @@
 		width: 10px;
 		height: 10px;
 		border-radius: 50%;
+		background: #bbb;
+	}
+	.active {
+		background: #333;
 	}
 }
