@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Carousel from "./components/Carousel";
 import CardsContainer from "./components/CardsContainer";
+import AboutUs from "./components/AboutUs.jsx";
 import Footer from "./components/Footer";
 
 import bagService from "./services/bags.js";
@@ -31,12 +32,14 @@ function App() {
 				<Carousel bags={bags} />
 				<CardsContainer bags={bags} />
 				{/* Aviso de página en progreso */}
-				<div className="aviso">
-					<h1>Página en desarrollo</h1>
-					<h3> 1º etapa: mobile</h3>
-					<h3> 2º etapa: desktop</h3>
-				</div>
 			</main>
+			<AboutUs />
+			<div className="aviso">
+				<h1>Página en desarrollo</h1>
+				<h3> 1º etapa: mobile</h3>
+				<h3> 2º etapa: desktop</h3>
+			</div>
+
 			<Footer />
 		</>
 	);

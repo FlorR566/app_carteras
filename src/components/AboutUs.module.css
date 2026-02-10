@@ -1,0 +1,97 @@
+.aboutUs {
+	margin: 20dvh 15dvh 20dvh 15dvh;
+	padding: 10dvh auto 0dvh auto;
+	scroll-margin-top: 14dvh;
+}
+.title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+.AboutUsContainer {
+	place-items: center;
+	display: grid;
+	grid-template-columns: 40% 3fr;
+	gap: 20px;
+	margin: 5dvh auto 0px auto;
+	padding: 10dvh auto 5dvh auto;
+}
+
+.imgAbout {
+	border-radius: 8px;
+	grid-column: 1/2;
+	width: 80%;
+	min-width: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.aboutText {
+	font-size: 1.3rem;
+	padding: auto;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	text-align: left;
+	width: 80%;
+	justify-self: center;
+}
+
+.titleCta {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+@media (768px <= width <= 1220px) {
+	.aboutUs {
+		width: 100%;
+		margin: 0px;
+		scroll-margin-top: 11dvh;
+	}
+
+	.AboutUsContainer {
+		place-items: center;
+		grid-template-columns: 40% 2fr;
+		gap: 5px;
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.imgAbout {
+		width: 90%;
+		min-width: 280px;
+		margin: 0px;
+	}
+
+	.aboutText {
+		width: 90%;
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.aboutUs {
+		margin: 0px;
+		padding: 0px;
+		scroll-margin-top: 18dvh;
+	}
+
+	.AboutUsContainer {
+		padding: 10px;
+		margin: 0px;
+	}
+
+	.aboutText {
+		width: 100%;
+		grid-column: 1/3;
+		font-size: 1.2rem;
+		padding: 0px 20px 0px 20px;
+		margin-top: 0px;
+	}
+
+	.titleCta {
+		font-size: 1.3rem;
+	}
+}
