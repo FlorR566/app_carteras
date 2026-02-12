@@ -21,14 +21,14 @@ const Hero = () => {
 							src={heroImageA}
 							alt="Cartera"
 							className={styles.heroImageA}
-							fetchpriority="high"
+							fetchPriority="high"
 						/>
 
 						<img
 							src={heroImageB}
 							alt="Cartera"
 							className={styles.heroImageB}
-							fetchpriority="high"
+							fetchPriority="high"
 						/>
 					</div>
 				</>
