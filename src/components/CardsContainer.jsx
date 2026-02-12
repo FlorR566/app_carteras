@@ -1,6 +1,8 @@
 import styles from "../components/CardsContainer.module.css";
+import useIsMobile from "../useIsMobile";
 
 const Card = ({ bags, category }) => {
+	const isMobile = useIsMobile();
 	return (
 		<div className={styles.cardsContainer}>
 			{bags.map((item) =>
@@ -11,7 +13,11 @@ const Card = ({ bags, category }) => {
 						<h3>{item.name}</h3>
 						<p>$ {item.price}</p>
 
-						<button className={styles.cardButton}>VER PRODUCTO</button>
+						{isMobile ? (
+							<button className={styles.cardButton}>COMPRAR</button>
+						) : (
+							<button className={styles.cardButton}>VER PRODUCTO</button>
+						)}
 					</div>
 				) : (
 					" "
