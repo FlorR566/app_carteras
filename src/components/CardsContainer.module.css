@@ -1,12 +1,4 @@
-:root {
-	--color-fondo: #ffffff;
-	--color-fondoSecundario: #faf8f8;
-	--color-letrasPrimario: #111;
-	--color-letrasSecundario: #656262;
-	--color-iconHover: #cfcd65;
-	--color-letrasTerciario: #a27451;
-}
-
+/* Desktop */
 .products h2 {
 	text-align: center;
 	text-transform: uppercase;
@@ -72,6 +64,7 @@
 	border-radius: 6px;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
 	.products {
 		padding: 140px 10% 5rem 10%;

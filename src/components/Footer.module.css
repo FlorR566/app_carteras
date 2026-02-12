@@ -1,13 +1,5 @@
-:root {
-	--color-fondo: #ffffff;
-	--color-letrasPrimario: #111;
-	--color-letrasSecundario: #656262;
-	--color-iconHover: #cfcd65;
-	--color-letrasTerciario: #a27451;
-}
-
+/* Desktop */
 @media (min-width: 769px) {
-	/* Desktop */
 	.footer {
 		width: 100%;
 		height: 20rem;

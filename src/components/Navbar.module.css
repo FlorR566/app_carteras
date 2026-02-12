@@ -1,13 +1,4 @@
-/* --- NAVBAR GENERAL --- */
-:root {
-	--color-fondo: #ffffff;
-	--color-fondoSecundario: #faf8f8;
-	--color-letrasPrimario: #111;
-	--color-letrasSecundario: #656262;
-	--color-iconHover: #cfcd65;
-	--color-letrasTerciario: #a27451;
-}
-
+/* Mobile */
 .navbar {
 	position: fixed;
 	width: 100%;
@@ -57,7 +48,7 @@
 .navLinks a {
 	color: var(--color-letrasPrimario);
 	text-decoration: none;
-	font-size: 1rem;
+	font-size: 1.2rem;
 }
 
 .navLinks a:hover {

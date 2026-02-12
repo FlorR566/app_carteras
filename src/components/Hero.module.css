@@ -1,14 +1,4 @@
-:root {
-	--color-fondo: #ffffff;
-	--color-fondoSecundario: #faf8f8;
-	--color-letrasPrimario: #111;
-	--color-letrasSecundario: #656262;
-	--color-iconHover: #cfcd65;
-	--color-letrasTerciario: #a27451;
-}
-
-/* ---------- MOBILE ---------- */
-
+/* Mobile */
 .hero {
 	flex-direction: column;
 	justify-content: space-between;
@@ -113,7 +103,7 @@
 		font-size: 2.5rem;
 		margin: auto;
 		margin-top: 250px;
-		text-align: left;
+		text-align: center;
 		width: 80%;
 	}
 
