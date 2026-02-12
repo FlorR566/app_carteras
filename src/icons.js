@@ -5,7 +5,7 @@ const socialIcons = [
 		id: 1,
 		target: "_blank",
 		rel: "noopener noreferrer",
-		href: "https://wa.me/1150609490",
+		href: "https://wa.me/541150609490",
 		Icon: FaWhatsapp,
 	},
 	{
