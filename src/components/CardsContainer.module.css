@@ -73,7 +73,54 @@
 	transform: translateX(-50%);
 }
 
-/* NUEVO Desktop */
+/* Estilos base del Modal */
+.modal {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(5px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modalContent {
+	background-color: #ffffff;
+	color: var(--color-letrasPrimario);
+	font-weight: 600;
+	margin: auto;
+	padding: 10px;
+	width: 800px;
+	max-width: 90%;
+	max-height: 80dvh;
+	border-radius: 8px;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+}
+
+.closeButton {
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	font-size: 50px;
+	font-weight: 300;
+	cursor: pointer;
+	color: var(--color-letrasPrimario);
+}
+
+.modalContent img {
+	width: 200px;
+	max-height: 300px;
+	object-fit: fill;
+	border-radius: 8px;
+}
+
+/* Desktop */
 @media (min-width: 769px) {
 	.products {
 		margin-top: 8dvh;
@@ -110,5 +157,26 @@
 		background-color: var(--color-letrasTerciario);
 		color: var(--color-fondo);
 		border-radius: 6px;
+	}
+
+	.modalContent {
+		margin: 5% auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.modalContent p {
+		font-size: 20px;
+		font-weight: 400;
+		width: 80%;
+	}
+
+	.closeButton {
+		color: #7b7979;
+	}
+
+	.closeButton:hover {
+		color: var(--color-letrasPrimario);
 	}
 }
