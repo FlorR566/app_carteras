@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "../components/CardsContainer.module.css";
 import useIsMobile from "../useIsMobile";
 import useLockBodyScroll from "../useLockBodyScroll";
+import socialIcons from "../icons";
 
 const Card = ({ bags, category }) => {
 	const isMobile = useIsMobile();
@@ -11,7 +12,7 @@ const Card = ({ bags, category }) => {
 
 	return (
 		<>
-			<div className={styles.cardsContainer}>
+			<div id="products" className={styles.cardsContainer}>
 				{bags.map((item) =>
 					category === item.category ? (
 						<div className={styles.card} key={item.id}>
@@ -58,13 +59,34 @@ const Card = ({ bags, category }) => {
 						>
 							&times;
 						</span>
-						{selectedProduct.images.map((img) => (
-							<img src={img} />
-						))}
+
+						<div className={styles.imgContainer}>
+							{selectedProduct.images.map((img) => (
+								<img src={img} />
+							))}
+						</div>
 						<h2>{selectedProduct.name}</h2>
-						<h3>Precio: $ {selectedProduct.price}</h3>
-						<p>{selectedProduct.characteristics}</p>
-						<h4 className={styles.measures}>{selectedProduct.measures}</h4>
+
+						<div className={styles.characteristics}>
+							<p>{selectedProduct.characteristics}</p>
+						</div>
+
+						<div className={styles.modalPriceMeasure}>
+							<p>Precio: $ {selectedProduct.price}</p>
+							<p className={styles.measures}>{selectedProduct.measures}</p>
+						</div>
+
+						<div className={styles.modalPurchase}>
+							<p>Para comprar: </p>
+							<a
+								href="https://wa.me/541150609490"
+								target="_blank"
+								rel="noopener noreferrer"
+								className={styles.cardButton}
+							>
+								CONSULTAR POR WHATSAPP
+							</a>
+						</div>
 					</div>
 				</div>
 			)}

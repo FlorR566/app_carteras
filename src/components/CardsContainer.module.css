@@ -3,6 +3,7 @@
 	margin-top: 11dvh;
 	padding: 0dvh 1dvh 5rem 1dvh;
 	text-align: center;
+	scroll-margin-top: 11dvh;
 }
 
 .products h2 {
@@ -26,10 +27,6 @@
 	border-radius: 6px;
 	min-height: 310px;
 	position: relative;
-}
-
-.card:hover {
-	background-color: #f4dac7;
 }
 
 .card img {
@@ -65,12 +62,12 @@
 	color: var(--color-fondo);
 	font-size: 1rem;
 	padding: 3px;
-	margin: 0px auto 0px auto;
 	width: 90%;
 	position: absolute;
 	bottom: 10px;
 	left: 50%;
 	transform: translateX(-50%);
+	cursor: pointer;
 }
 
 /* Estilos base del Modal */
@@ -89,47 +86,74 @@
 }
 
 .modalContent {
-	background-color: #ffffff;
+	background-color: var(--color-fondo);
 	color: var(--color-letrasPrimario);
 	font-weight: 600;
 	margin: auto;
 	padding: 10px;
 	width: 800px;
-	max-width: 90%;
-	max-height: 80dvh;
+	max-width: 80%;
+	height: 600px;
 	border-radius: 8px;
 	position: relative;
 	text-align: center;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .closeButton {
 	position: absolute;
 	top: 0px;
-	right: 20px;
-	font-size: 50px;
+	right: 10px;
+	font-size: 55px;
 	font-weight: 300;
 	cursor: pointer;
-	color: var(--color-letrasPrimario);
+	color: yellow;
+	background-color: var(--color-letrasTerciario);
+	border-radius: 0px 0px 8px 8px;
+}
+
+.imgContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	width: 100%;
+	justify-items: center;
+	/* 
+	background-color: #35423e; */
 }
 
 .modalContent img {
-	width: 200px;
-	max-height: 300px;
+	width: 100%; /* Que ocupen todo el ancho de su celda de grid */
+	height: 200px;
 	object-fit: fill;
-	border-radius: 8px;
 }
+
+.imgContainer img:last-child:nth-child(odd) {
+	grid-column: span 2;
+	justify-content: center;
+	width: 60%;
+}
+
+/* .modalContent p {
+	font-size: 20px;
+	font-weight: 400;
+	width: 80%;
+} */
 
 /* Desktop */
 @media (min-width: 769px) {
 	.products {
 		margin-top: 8dvh;
 		padding-top: 1rem;
+		scroll-margin-top: 8dvh;
 	}
 
 	.cardsContainer {
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
+		gap: 1rem;
 		margin: 2rem 20dvh 2rem 20dvh;
 	}
 
@@ -139,44 +163,150 @@
 		padding: 0rem;
 	}
 
+	.card:hover {
+		background-color: #f4dac7;
+	}
+
 	.card img {
 		width: 200px;
 		max-height: 250px;
 		border-radius: 6px;
 		padding-top: 10px;
+		cursor: pointer;
 	}
 
 	.cardButton {
-		background-color: var(--color-fondo);
-		color: var(--color-letrasTerciario);
-		font-size: 1.3rem;
-		width: 60%;
+		position: absolute;
+		bottom: 3.5%;
+		left: 50%;
+		font-size: 1rem;
+		width: auto;
+		padding: 5px 10px;
+		/* Mantiene centrado y agrega transición*/
+		transform: translateX(-50%) scale(1);
+		transition: transform 0.3s ease;
 	}
 
 	.cardButton:hover {
-		background-color: var(--color-letrasTerciario);
-		color: var(--color-fondo);
-		border-radius: 6px;
-	}
-
-	.modalContent {
-		margin: 5% auto;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.modalContent p {
-		font-size: 20px;
-		font-weight: 400;
-		width: 80%;
+		transform: translateX(-50%) scale(1.05);
 	}
 
 	.closeButton {
-		color: #7b7979;
+		font-size: 60px;
+		right: 30px;
+		color: var(--color-fondo);
+		/* background-color: var(--color-fondo); */
+		transition: transform 0.3s ease;
 	}
 
 	.closeButton:hover {
+		color: black;
+		/* transform: scale(1.2); */
+		cursor: pointer;
+	}
+
+	/* Estilos base del Modal */
+	.modalContent {
+		background-color: var(--color-fondo);
 		color: var(--color-letrasPrimario);
+		padding: 40px;
+		width: 90%; /* en pantallas chicas ocupa esto */
+		max-width: 900px; /* llega a 900 y deja de crecer*/
+		height: 680px;
+		max-height: 80dvh;
+		border-radius: 8px;
+		position: relative;
+		text-align: center;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* background-color: blueviolet; */
+	}
+
+	.imgContainer {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: baseline;
+		gap: 30px;
+		width: 100%;
+		height: 300px;
+		/* background-color: #087655; */
+	}
+
+	.modalContent img {
+		width: 90%;
+		max-width: 230px;
+		height: 300px;
+		max-height: 330px;
+		object-fit: fill;
+
+		overflow: hidden;
+	}
+
+	.imgContainer img:last-child:nth-child(odd) {
+		width: 100%;
+	}
+
+	.modalContent h2 {
+		margin-top: 20px;
+		align-items: center;
+		font-weight: 600;
+		width: 100%;
+		/* background-color: #7b7979; */
+	}
+
+	.modal p {
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	.characteristics {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 120px;
+		/* background-color: aqua; */
+	}
+
+	.modalPriceMeasure {
+		display: flex;
+		flex-direction: row;
+		gap: 30px;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 40px;
+		/* background-color: #f4dac7; */
+	}
+
+	.modalPurchase {
+		display: flex;
+		flex-direction: row;
+		align-items: center; /*Alinea verticalmente el texto y el botón */
+		justify-content: center; /* Alinea horizontalmente */
+		gap: 15px; /* Espacio entre el texto "Para comprar:" y el botón */
+		margin-top: 10px; /* Un poco de aire arriba */
+		width: 100%;
+		/* background-color: cadetblue; */
+	}
+
+	/* Esta regla es la clave: resetea el posicionamiento absoluto del botón SOLO en el modal */
+	.modalPurchase .cardButton {
+		position: relative; /* Cambia de absolute a relative */
+		bottom: auto; /* Quita el anclaje del fondo */
+		left: auto; /* Quita el anclaje de la izquierda */
+		transform: none; /* Quita el desplazamiento del 50% */
+		width: 250px; /* Que el ancho se adapte al texto */
+		padding: 5px 10px; /* Dale un poco más de cuerpo */
+		margin: 0; /* Quita márgenes automáticos */
+	}
+
+	/* Asegúrate de que el hover también funcione sin el translateX anterior */
+	.modalPurchase .cardButton:hover {
+		transform: scale(1.05);
+		cursor: pointer;
 	}
 }
