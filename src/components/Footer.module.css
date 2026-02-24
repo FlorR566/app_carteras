@@ -29,7 +29,7 @@
 	.followUsDiv {
 		width: 100%;
 		height: auto;
-		font-size: 16px;
+		font-size: 20px;
 		display: flex;
 		align-items: center;
 		justify-self: center;
@@ -41,12 +41,13 @@
 		height: 1.3em;
 		width: 1.3em;
 		margin: 0px 12px;
-		color: var(--color-letrasSecundario);
+		color: var(--color-letrasTerciario);
 		transition: opacity 0.3s ease-in-out;
 	}
 
 	.socialIcono:hover {
-		color: var(--color-letrasTerciario);
+		transform: scale(1.2);
+		transition: 0.3s ease-in-out;
 	}
 
 	.copyright {
@@ -72,10 +73,9 @@
 @media (max-width: 768px) {
 	.footer {
 		width: 100%;
-		height: 15rem;
-		padding: 2rem 1.3rem;
+		height: 18rem;
+		padding: 2.5rem 1.3rem;
 		margin-top: auto;
-		/* border-top: 10px solid var(--color-letrasSecundario); */
 		background-color: var(--color-fondo);
 		color: var(--color-letrasPrimario);
 		display: flex;
@@ -93,14 +93,15 @@
 	.ralewayTextLogo {
 		text-align: center;
 		font-weight: 600;
-		font-size: 25px;
+		font-size: 28px;
 	}
 
 	.followUsDiv {
-		font-size: 16px;
+		font-size: 20px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding-bottom: 3rem;
 	}
 
 	.socialIcono {
@@ -108,18 +109,14 @@
 		height: 1.3em;
 		width: 1.3em;
 		margin: 0px 12px;
-		color: var(--color-letrasSecundario);
-		transition: opacity 0.3s ease-in-out;
-	}
-
-	.socialIcono:hover {
 		color: var(--color-letrasTerciario);
+		transition: opacity 0.3s ease-in-out;
 	}
 
 	.copyright {
 		color: var(--color-letrasSecundario);
 		height: 2.5rem;
-		font-size: 12px;
+		font-size: 14px;
 		text-align: center;
 		padding: 5px;
 	}
