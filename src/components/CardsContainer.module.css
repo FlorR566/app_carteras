@@ -92,7 +92,7 @@
 	margin: auto;
 	padding: 10px;
 	width: 800px;
-	max-width: 80%;
+	max-width: 90%;
 	height: 600px;
 	border-radius: 8px;
 	position: relative;
@@ -115,35 +115,60 @@
 	border-radius: 0px 0px 8px 8px;
 }
 
+/* Contenedor de las fotos */
 .imgContainer {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 10px;
+	display: flex;
+	overflow-x: auto; /* solo muestra la barra si hay mas de 1 foto y hay desborde*/
+	max-height: 300px; /* Altura fija obligatoria */
+	scroll-snap-type: x mandatory; /* eje X obligatorio */
+	gap: 5px;
+
+	/* Estilos para navegadores basados en Webkit (Chrome, Safari, Edge) */
+	padding-bottom: 10px; /* Espacio para que la barra de scroll no tape las fotos*/
+	/* background-color: #35423e; */
+}
+
+/* 1. Ancho de la barra */
+.imgContainer::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* 2. El fondo de la barra (track) */
+.imgContainer::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+}
+
+/* 3. La parte que se mueve (thumb) */
+.imgContainer::-webkit-scrollbar-thumb {
+	background: var(--color-letrasTerciario);
+	border-radius: 10px;
+}
+
+/* Las imágenes dentro */
+.imgContainer img {
+	height: 300px;
+	width: 70%;
+	height: 100%; /* Ocupan todo el alto del contenedor */
+	object-fit: cover;
+	scroll-snap-align: center; /* Cada imagen se "clava" al centro al scrollear */
+	flex-shrink: 0; /* Evita que las imágenes se achiquen */
+	border-radius: 8px;
+	display: inline-block;
+}
+
+/*  Si es imagen única */
+.imgContainer img:only-child {
+	height: 300px; /* Que no fuerce el alto del scroll */
+	max-height: 450px; /* Para que no se haga infinita */
 	width: 100%;
-	justify-items: center;
-	/* 
-	background-color: #35423e; */
 }
 
-.modalContent img {
-	width: 100%; /* Que ocupen todo el ancho de su celda de grid */
-	height: 200px;
-	object-fit: fill;
+.imgContainer img:last-child:nth-child(even) {
+	width: 100%; /* en arrays pares, la última se ve 100% */
 }
 
-.imgContainer img:last-child:nth-child(odd) {
-	grid-column: span 2;
-	justify-content: center;
-	width: 60%;
-}
-
-/* .modalContent p {
-	font-size: 20px;
-	font-weight: 400;
-	width: 80%;
-} */
-
-/* Desktop */
+/* ____ Desktop ____  */
 @media (min-width: 769px) {
 	.products {
 		margin-top: 8dvh;
@@ -211,8 +236,8 @@
 		color: var(--color-letrasPrimario);
 		padding: 40px;
 		width: 90%; /* en pantallas chicas ocupa esto */
-		max-width: 900px; /* llega a 900 y deja de crecer*/
-		height: 680px;
+		max-width: 800px; /* llega a 900 y deja de crecer*/
+		height: 700px;
 		max-height: 80dvh;
 		border-radius: 8px;
 		position: relative;
@@ -226,27 +251,34 @@
 
 	.imgContainer {
 		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: baseline;
-		gap: 30px;
+		overflow-x: auto;
+		overflow-y: hidden;
+		scroll-snap-type: x mandatory;
+		justify-content: flex-start;
+		gap: 15px;
 		width: 100%;
-		height: 300px;
+		max-height: 340px;
+		padding-bottom: 10px;
+
 		/* background-color: #087655; */
 	}
 
-	.modalContent img {
-		width: 90%;
-		max-width: 230px;
+	.imgContainer img {
+		flex-shrink: 0;
+		width: 100%;
+		max-width: 260px;
 		height: 300px;
-		max-height: 330px;
+		max-height: 290px;
 		object-fit: fill;
-
-		overflow: hidden;
+		scroll-snap-align: center; /* Alineación del imán al inicio */
 	}
 
-	.imgContainer img:last-child:nth-child(odd) {
-		width: 100%;
+	/* Si es imagen única se queda centrado */
+	.imgContainer img:first-child {
+		margin-left: auto;
+	}
+	.imgContainer img:last-child {
+		margin-right: auto;
 	}
 
 	.modalContent h2 {
