@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import bagService from "./services/bags.js";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Carousel from "./components/Carousel";
-import CardsContainer from "./components/CardsContainer";
-import AboutUs from "./components/AboutUs.jsx";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Hero from "./components/Hero/Hero.jsx";
+import Carousel from "./components/Carousel/Carousel.jsx";
+import CardsContainer from "./components/CardsContainer/CardsContainer.jsx";
+import AboutUs from "./components/AboutUs/AboutUs.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 import "./styles.css";
 
 function App() {

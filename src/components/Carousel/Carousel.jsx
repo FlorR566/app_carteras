@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import styles from "./Carousel.module.css";
+import styles from "./styles.module.css";
 
 function Arrow({ left, onActivate }) {
 	const stopAndActivate = (e) => {

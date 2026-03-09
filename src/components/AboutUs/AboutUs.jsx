@@ -1,5 +1,5 @@
-import styles from "../components/AboutUs.module.css";
-import useIsMobile from "../useIsMobile";
+import styles from "./styles.module.css";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const AboutUs = () => {
 	const isMobile = useIsMobile();

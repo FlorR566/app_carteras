@@ -1,5 +1,6 @@
 /* Mobile */
 .hero {
+	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 13dvh 2dvh 20dvh 2dvh;
