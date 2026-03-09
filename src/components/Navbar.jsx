@@ -1,14 +1,8 @@
 import { useState } from "react";
 import styles from "./Navbar.module.css";
+import { NAV_LINKS } from "../constants/navigation";
 import logo from "../assets/Logo.png";
 import { X, Menu } from "lucide-react";
-
-const NAV_LINKS = [
-	{ label: "Inicio", href: "#home" },
-	{ label: "Productos", href: "#products" },
-	{ label: "Nosotros", href: "#aboutUs" },
-	{ label: "Contacto", href: "#contact" },
-];
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +21,7 @@ const Navbar = () => {
 						className={styles.imgLogo}
 						alt="Logo Lady Valentina"
 					/>
-					<h1 className={styles.ralewayTextLogo}>LADY VALENTINA</h1>
+					<span className={styles.ralewayTextLogo}>LADY VALENTINA</span>
 				</div>
 			</a>
 
