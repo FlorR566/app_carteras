@@ -1,15 +1,12 @@
 import axios from "axios";
-
-const baseUrl = "https://lady-valentina-backend.onrender.com/api/products";
+const baseUrl = import.meta.env.VITE_API_URL;
 
 const getAll = () => {
-	const request = axios.get(baseUrl);
-	return request.then((response) => response.data);
+	return axios.get(baseUrl).then((response) => response.data);
 };
 
 const create = (newObject) => {
-	const request = axios.post(baseUrl, newObject);
-	return request.then((response) => response.data);
+	return axios.post(baseUrl, newObject).then((response) => response.data);
 };
 
 export default { getAll, create };

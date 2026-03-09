@@ -33,6 +33,24 @@ body {
 	flex: 1;
 }
 
+.loadingText {
+	text-align: center;
+	padding: 2rem;
+	color: var(--color-letrasSecundario);
+	font-size: 1rem;
+}
+
+.errorText {
+	text-align: center;
+	padding: 2rem;
+	color: #c0392b;
+	font-size: 1rem;
+	background-color: #fdecea;
+	border-radius: 8px;
+	max-width: 400px;
+	margin: 2rem auto;
+}
+
 .aviso {
 	max-width: 30%;
 	background-color: #ffbf0087;
@@ -40,11 +58,12 @@ body {
 	border-radius: 20px;
 	padding: 0.5rem;
 	margin: 50px auto;
-	font-size: 10px;
+	font-size: 20px;
 }
 
 @media (max-width: 768px) {
 	.aviso {
 		max-width: 70%;
+		font-size: 15px;
 	}
 }
