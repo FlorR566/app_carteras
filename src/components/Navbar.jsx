@@ -1,11 +1,20 @@
 import { useState } from "react";
 import styles from "./Navbar.module.css";
 import logo from "../assets/Logo.png";
+import { X, Menu } from "lucide-react";
+
+const NAV_LINKS = [
+	{ label: "Inicio", href: "#home" },
+	{ label: "Productos", href: "#products" },
+	{ label: "Nosotros", href: "#aboutUs" },
+	{ label: "Contacto", href: "#contact" },
+];
 
 const Navbar = () => {
-	const [open, setOpen] = useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	let statusMenu = open ? "X" : "☰";
+	const handleMenuToggle = () => setIsMenuOpen((prev) => !prev);
+	const handleLinkClick = () => setIsMenuOpen(false);
 
 	return (
 		<nav className={styles.navbar}>
@@ -13,8 +22,8 @@ const Navbar = () => {
 				<div className={styles.containerLogo}>
 					<img
 						src={logo}
-						width="45"
-						height="50"
+						width={45}
+						height={50}
 						className={styles.imgLogo}
 						alt="Logo Lady Valentina"
 					/>
@@ -24,25 +33,21 @@ const Navbar = () => {
 
 			<button
 				className={styles.navToggle}
-				onClick={() => setOpen(!open)}
-				aria-label="Abrir o cerrar el menú"
+				onClick={handleMenuToggle}
+				aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+				aria-expanded={isMenuOpen}
 			>
-				{statusMenu}
+				{isMenuOpen ? <X size={25} /> : <Menu size={25} />}
 			</button>
 
-			<ul className={`${styles.navLinks} ${open && styles.open}`}>
-				<li>
-					<a href="#home">Inicio</a>
-				</li>
-				<li>
-					<a href="#products">Productos</a>
-				</li>
-				<li>
-					<a href="#aboutUs">Nosotros</a>
-				</li>
-				<li>
-					<a href="#contact">Contacto</a>
-				</li>
+			<ul className={`${styles.navLinks} ${isMenuOpen ? styles.open : ""}`}>
+				{NAV_LINKS.map(({ label, href }) => (
+					<li key={href}>
+						<a href={href} onClick={handleLinkClick}>
+							{label}
+						</a>
+					</li>
+				))}
 			</ul>
 		</nav>
 	);
