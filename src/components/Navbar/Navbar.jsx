@@ -1,7 +1,7 @@
 import { useState } from "react";
-import styles from "./Navbar.module.css";
-import { NAV_LINKS } from "../constants/navigation";
-import logo from "../assets/Logo.png";
+import styles from "./styles.module.css";
+import { NAV_LINKS } from "../../constants/navigation";
+import logo from "../../assets/Logo.png";
 import { X, Menu } from "lucide-react";
 
 const Navbar = () => {

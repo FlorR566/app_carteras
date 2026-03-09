@@ -1,8 +1,7 @@
 import { useState } from "react";
-import styles from "../components/CardsContainer.module.css";
-import useIsMobile from "../useIsMobile";
-import useLockBodyScroll from "../useLockBodyScroll";
-import socialIcons from "../icons";
+import styles from "./styles.module.css";
+import useIsMobile from "../../hooks/useIsMobile";
+import useLockBodyScroll from "../../hooks/useLockBodyScroll";
 
 const Card = ({ bags, category }) => {
 	const isMobile = useIsMobile();

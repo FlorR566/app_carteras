@@ -1,5 +1,5 @@
-import styles from "./Footer.module.css";
-import socialIcons from "../icons";
+import styles from "./styles.module.css";
+import socialIcons from "../../constants/icons";
 
 const SocialLinks = () => {
 	return (

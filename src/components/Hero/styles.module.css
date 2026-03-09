@@ -1,0 +1,505 @@
+/* ----------------------------
+   HERO — Mobile first
+---------------------------- */
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(28px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes slideRight {
+	from {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes kenBurns {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.06);
+	}
+}
+@keyframes progressFill {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
+
+/* ── Raíz ── */
+.hero {
+	display: flex;
+	flex-direction: column;
+	min-height: 100dvh;
+	padding-top: 4rem;
+	background-color: var(--color-fondo);
+	overflow: hidden;
+}
+
+/* ----------------------------
+   MOBILE
+---------------------------- */
+
+.mobileImageWrapper {
+	position: relative;
+	width: 100%;
+	height: 50dvh;
+	overflow: hidden;
+	animation: fadeIn 0.8s ease both;
+}
+
+.mobileImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center 20%;
+	display: block;
+}
+
+.slideOverlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		to bottom,
+		transparent 40%,
+		rgba(17, 11, 6, 0.35) 100%
+	);
+	pointer-events: none;
+}
+
+.floatingTag {
+	position: absolute;
+	top: 1.5rem;
+	right: 1rem;
+	background-color: var(--color-letrasPrimario);
+	color: var(--color-fondo);
+	font-size: 0.65rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	padding: 0.4rem 0.9rem;
+	border-radius: 999px;
+	animation: fadeIn 0.6s 0.5s both;
+}
+
+/* Desktop carousel oculto en mobile */
+.carouselWrapper {
+	display: none;
+}
+
+/* ── Contenido mobile ── */
+.heroContent {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem 1rem 5rem;
+	animation: fadeUp 0.7s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.seasonRow {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 1.25rem;
+	animation: slideRight 0.6s 0.2s both;
+}
+
+.seasonLine {
+	display: block;
+	width: 32px;
+	height: 1px;
+	background-color: var(--color-letrasTerciario);
+	flex-shrink: 0;
+}
+
+.seasonLabel {
+	font-size: 0.7rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--color-letrasTerciario);
+	font-weight: 500;
+}
+
+.title {
+	font-family: "Raleway", sans-serif;
+	font-size: clamp(2.4rem, 8vw, 3rem);
+	font-weight: 300;
+	line-height: 1.08;
+	letter-spacing: -0.01em;
+	color: var(--color-letrasPrimario);
+	margin: 0 0 1.25rem;
+	animation: fadeUp 0.7s 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.title em {
+	font-style: italic;
+	color: var(--color-letrasTerciario);
+}
+
+.subtitle {
+	font-size: 0.95rem;
+	line-height: 1.7;
+	color: var(--color-letrasSecundario);
+	font-weight: 400;
+	margin: 0 0 1rem;
+	max-width: 38ch;
+	animation: fadeUp 0.7s 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.buttonRow {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+	animation: fadeUp 0.7s 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.btnPrimary,
+.btnSecondary {
+	font-family: "Raleway", sans-serif;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 999px;
+	padding: 0.8rem 1rem;
+	transition:
+		background-color 0.25s ease,
+		color 0.25s ease,
+		transform 0.2s ease;
+	cursor: pointer;
+}
+
+.btnPrimary {
+	background-color: var(--color-letrasTerciario);
+	color: #fff;
+	border: 2px solid var(--color-letrasTerciario);
+}
+
+.btnPrimary:hover {
+	background-color: #8a5e38;
+	border-color: #8a5e38;
+	transform: translateY(-2px);
+}
+
+.btnSecondary {
+	display: flex;
+	align-items: center;
+	gap: 0.45rem;
+	background-color: transparent;
+	color: var(--color-letrasSecundario);
+	border: 2px solid var(--color-letrasSecundario);
+}
+
+.btnSecondary svg {
+	transition: transform 0.25s ease;
+}
+
+.btnSecondary:hover {
+	background-color: var(--color-letrasSecundario);
+	color: var(--color-fondo);
+	transform: translateY(-2px);
+}
+
+.btnSecondary:hover svg {
+	transform: translateX(4px);
+}
+
+.statsRow {
+	display: none;
+}
+
+/* ----------------------------
+   DESKTOP (≥ 769px)
+---------------------------- */
+@media (min-width: 769px) {
+	.hero {
+		flex-direction: row;
+		align-items: stretch;
+		min-height: 100dvh;
+		padding-top: 0;
+	}
+
+	/* Mobile wrapper oculto */
+	.mobileImageWrapper {
+		display: none;
+	}
+
+	/* ----------------------------
+	   CARRUSEL DIAGONAL
+	---------------------------- */
+	.carouselWrapper {
+		display: block; /* visible en desktop */
+		position: relative;
+		flex: 0 0 58%;
+		height: 100dvh;
+		overflow: hidden;
+		background: #111;
+	}
+
+	/* Cada slide: ocupa todo el wrapper, cross-fade */
+	.slide {
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		transition: opacity 0.7s ease;
+		will-change: opacity;
+	}
+
+	.slideActive {
+		opacity: 1;
+	}
+
+	.slideImg {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		display: block;
+		animation: kenBurns 5s ease-out forwards;
+	}
+
+	/* Degradado para leer etiquetas */
+	.slideOverlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			135deg,
+			rgba(17, 11, 6, 0.15) 0%,
+			transparent 50%,
+			rgba(17, 11, 6, 0.4) 100%
+		);
+		pointer-events: none;
+	}
+
+	/* ── Corte diagonal ── */
+	.diagonalCut {
+		position: absolute;
+		top: 0;
+		right: -2px;
+		width: 120px;
+		height: 100%;
+		background-color: var(--color-fondo);
+		clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 0% 100%);
+		z-index: 10;
+		pointer-events: none;
+	}
+
+	/* ── Etiqueta del slide (esquina superior izquierda) ── */
+	.slideLabel {
+		position: absolute;
+		top: 96px;
+		left: 40px;
+		z-index: 20;
+		animation: fadeIn 0.5s ease both;
+	}
+
+	.slideLabel span {
+		display: inline-block;
+		background-color: var(--color-letrasTerciario);
+		color: #fff;
+		font-size: 0.65rem;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		padding: 0.45rem 1rem;
+		border-radius: 999px;
+		font-weight: 500;
+	}
+
+	/* ── Contador 01 / 04 (esquina inferior izquierda) ── */
+	.slideCounter {
+		position: absolute;
+		bottom: 40px;
+		left: 40px;
+		z-index: 20;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.counterCurrent {
+		font-family: "Raleway", sans-serif;
+		font-size: 1.5rem;
+		font-weight: 300;
+		color: #fff;
+		line-height: 1;
+	}
+
+	.counterLine {
+		display: block;
+		width: 28px;
+		height: 1px;
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+
+	.counterTotal {
+		font-family: "Raleway", sans-serif;
+		font-size: 0.85rem;
+		font-weight: 300;
+		color: rgba(255, 255, 255, 0.55);
+		line-height: 1;
+	}
+
+	/* ── Barra de progreso (segmentos) ── */
+	.progressBar {
+		position: absolute;
+		bottom: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 20;
+		display: flex;
+		gap: 8px;
+	}
+
+	.progressSegment {
+		width: 36px;
+		height: 3px;
+		border-radius: 999px;
+		background-color: rgba(255, 255, 255, 0.3);
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		transition: background-color 0.3s ease;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.progressSegment::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: #fff;
+		transform: scaleX(0);
+		transform-origin: left;
+		border-radius: 999px;
+	}
+
+	.progressActive {
+		background-color: rgba(255, 255, 255, 0.3);
+	}
+
+	.progressActive::after {
+		animation: progressFill 4s linear forwards;
+	}
+
+	/* ── Flecha siguiente (esquina inferior derecha del carrusel) ── */
+	.arrowNext {
+		position: absolute;
+		bottom: 32px;
+		right: 120px;
+		z-index: 20;
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		border: 1.5px solid rgba(255, 255, 255, 0.5);
+		background-color: transparent;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition:
+			background-color 0.25s ease,
+			border-color 0.25s ease,
+			transform 0.2s ease;
+	}
+
+	.arrowNext:hover {
+		background-color: rgba(255, 255, 255, 0.15);
+		border-color: #fff;
+		transform: translateX(3px);
+	}
+
+	/* ----------------------------
+	   CONTENIDO desktop
+	---------------------------- */
+	.heroContent {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 100px 60px 60px 20px;
+		animation: fadeUp 0.7s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+	}
+
+	.title {
+		font-size: clamp(3rem, 4.5vw, 4.5rem);
+		margin-bottom: 1.5rem;
+	}
+
+	.subtitle {
+		font-size: 1rem;
+		margin-bottom: 2.5rem;
+		max-width: 42ch;
+	}
+
+	.buttonRow {
+		gap: 1.25rem;
+	}
+
+	.btnPrimary,
+	.btnSecondary {
+		padding: 0.8rem 1.8rem;
+	}
+
+	/* Stats */
+	.statsRow {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		margin-top: 3.5rem;
+		padding-top: 2.5rem;
+		border-top: 1px solid #e2d9d0;
+		animation: fadeUp 0.7s 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+	}
+
+	.stat {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+	}
+
+	.statValue {
+		font-family: "Raleway", sans-serif;
+		font-size: 1.8rem;
+		font-weight: 300;
+		color: var(--color-letrasPrimario);
+		line-height: 1;
+	}
+
+	.statLabel {
+		font-size: 0.65rem;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--color-letrasSecundario);
+	}
+
+	.statDivider {
+		width: 1px;
+		height: 36px;
+		background-color: #e2d9d0;
+		flex-shrink: 0;
+	}
+}
