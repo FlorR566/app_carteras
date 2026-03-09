@@ -76,14 +76,15 @@
 		font-size: 1.5rem;
 		cursor: pointer;
 		border: none;
-		color: var(--color-letrasPrimario);
+		color: var(--color-letrasTerciario);
 		background-color: var(--color-fondo);
+		z-index: 2000;
 	}
 
 	.navLinks {
 		position: absolute;
-		top: 70px;
-		z-index: 999;
+		top: 64px;
+		border-top: solid 1.5px var(--color-letrasTerciario);
 		right: 0;
 		flex-direction: column;
 		color: var(--color-letrasPrimario);
@@ -91,7 +92,7 @@
 		background: linear-gradient(to bottom, #ffffff 0%, #f5f1e8 100%);
 		width: 100%;
 		padding: 1rem 0;
-		padding-left: 15px;
+		padding-left: 2rem;
 		gap: 1rem;
 		display: none; /* oculto por defecto */
 	}
