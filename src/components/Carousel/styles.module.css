@@ -44,6 +44,9 @@
 		cursor: pointer;
 		z-index: 10;
 		opacity: 0.6;
+		background: none;
+		padding: 0px;
+		border: none;
 	}
 
 	.arrow:hover {
@@ -51,33 +54,39 @@
 	}
 
 	.arrowLeft {
-		left: 50px;
+		left: 100px;
 	}
 
 	.arrowRight {
-		right: 50px;
+		right: 100px;
 	}
 
 	.carouselDots {
 		width: 50%;
-		height: 30px;
+		height: 40px;
 		position: relative;
 		justify-self: center;
 		display: flex;
-		gap: 8px;
+		gap: 10px;
 		justify-content: center;
 		align-items: center;
-		border-radius: 8px;
 	}
 
 	.carouselDot {
+		cursor: pointer;
 		width: 10px;
-		height: 10px;
+		height: 13px;
 		border-radius: 50%;
+		border: solid 1px #333;
 		background: #bbb;
 	}
 
-	.active {
+	.carouselDot:hover {
+		background: #888;
+	}
+
+	.active,
+	.active:hover {
 		background: #333;
 	}
 }
@@ -133,15 +142,16 @@
 
 	.carouselDots {
 		display: flex;
-		gap: 8px;
+		gap: 10px;
 		justify-content: center;
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 
 	.carouselDot {
 		width: 10px;
-		height: 10px;
+		height: 12px;
 		border-radius: 50%;
+		border: solid 1px #333;
 		background: #bbb;
 	}
 	.active {
