@@ -6,12 +6,13 @@ const SocialLinks = () => {
 		<div className={styles.followUsDiv}>
 			Seguinos en:
 			{/* eslint-disable-next-line no-unused-vars */}
-			{socialIcons.map(({ id, href, target, rel, Icon }) => (
+			{socialIcons.map(({ id, href, target, title, rel, Icon }) => (
 				<a
 					key={id}
 					href={href}
 					target={target}
 					rel={rel}
+					title={title}
 					className={styles.hover}
 				>
 					<Icon className={styles.socialIcono} />

@@ -33,6 +33,7 @@ const AboutUs = () => {
 					<img
 						src="https://res.cloudinary.com/dvcxjks92/image/upload/c_fill,q_auto,f_auto/v1770669131/aboutWomen_vv2pdo.webp"
 						className={styles.imgAbout}
+						alt="Mujer posando con cartera Lady Valentina."
 					/>
 					<p className={styles.aboutText}>
 						Creemos que una cartera es más que un accesorio, es la compañera
