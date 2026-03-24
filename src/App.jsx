@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import bagService from "./services/bags.js";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Hero from "./components/Hero/Hero.jsx";
 import Carousel from "./components/Carousel/Carousel.jsx";
 import CardsContainer from "./components/CardsContainer/CardsContainer.jsx";
-import AboutUs from "./components/AboutUs/AboutUs.jsx";
-import Footer from "./components/Footer/Footer.jsx";
 import "./styles.css";
+
+// No se ven en el primer render — se cargan después
+const AboutUs = lazy(() => import("./components/AboutUs/AboutUs.jsx"));
+const Footer = lazy(() => import("./components/Footer/Footer.jsx"));
 
 function App() {
 	const [bags, setBags] = useState([]);
@@ -17,7 +19,7 @@ function App() {
 		// Se ejecuta apenas montamos el componente
 		bagService
 			.getAll()
-			.then((initialBags) => setBags(initialBags)) // Carteras de la DB se guardan en el estado
+			.then((initialBags) => setBags(initialBags))
 			.catch(() =>
 				setError("No pudimos cargar los productos. Intentá de nuevo."),
 			)
@@ -35,7 +37,6 @@ function App() {
 						{error}
 					</p>
 				)}
-
 				{!isLoading && !error && (
 					<>
 						<Carousel bags={bags} />
@@ -43,14 +44,17 @@ function App() {
 					</>
 				)}
 			</main>
-			<AboutUs />
 
-			{/* Aviso de página en progreso */}
-			<aside className="aviso" role="note">
-				<p>Página en desarrollo 🚧</p>
-			</aside>
+			<Suspense fallback={null}>
+				<AboutUs />
 
-			<Footer />
+				{/* Aviso de página en progreso */}
+				<aside className="aviso" role="note">
+					<p>Página en desarrollo 🚧</p>
+				</aside>
+
+				<Footer />
+			</Suspense>
 		</>
 	);
 }

@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 
+		<!-- Favicons -->
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -20,21 +21,41 @@
 			sizes="16x16"
 			href="/favicon_io/favicon-16x16.png"
 		/>
-		<!-- <link rel="manifest" href="/site.webmanifest" /> -->
 
+		<!-- Viewport y SEO -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta
 			name="description"
 			content="Carteras 100% Cuero — Descubrí la nueva colección de Bolsos, Carteras y Billeteras de cuero."
 		/>
 
+		<!-- Preconnect -->
+
 		<link rel="preconnect" href="https://res.cloudinary.com" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- ── Google Fonts sin bloquear el render ── -->
 		<link
+			rel="preload"
+			as="style"
 			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-			rel="stylesheet"
 		/>
+
+		<link
+			rel="stylesheet"
+			media="print"
+			onload="this.media = 'all'"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+		/>
+
+		<noscript>
+			<link
+				rel="stylesheet"
+				href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+			/>
+		</noscript>
+
 		<title>Lady Valentina</title>
 	</head>
 	<body>

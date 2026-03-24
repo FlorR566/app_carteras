@@ -1,7 +1,19 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+	plugins: [react()],
+
+	build: {
+		cssCodeSplit: true, // divide el CSS en chunks igual que el JS
+		rollupOptions: {
+			output: {
+				manualChunks: {
+					"vendor-react": ["react", "react-dom"],
+				},
+			},
+		},
+		// Avisa cuando un chunk supera 500kb
+		chunkSizeWarningLimit: 500,
+	},
+});
