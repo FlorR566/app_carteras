@@ -1,109 +1,51 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
-import useIsMobile from "../../hooks/useIsMobile";
+import Card from "./Card";
+import Modal from "./Modal";
 import useLockBodyScroll from "../../hooks/useLockBodyScroll";
 
-const Card = ({ bags, category }) => {
-	const isMobile = useIsMobile();
-	const [selectedProduct, setSelectedProduct] = useState(null);
-
-	useLockBodyScroll(!!selectedProduct);
+const CategorySection = ({ title, bags, category, onSelect }) => {
+	const filtered = bags.filter((item) => item.category === category);
+	if (filtered.length === 0) return null;
 
 	return (
 		<>
-			<div id="products" className={styles.cardsContainer}>
-				{bags.map((item) =>
-					category === item.category ? (
-						<div className={styles.card} key={item.id}>
-							<img
-								onClick={() => setSelectedProduct(item)}
-								src={item.images[0]}
-								alt={item.name}
-							/>
-
-							<h3>{item.name}</h3>
-							<p>$ {item.price}</p>
-
-							{isMobile ? (
-								<button
-									className={styles.cardButton}
-									onClick={() => setSelectedProduct(item)}
-								>
-									COMPRAR
-								</button>
-							) : (
-								<button
-									className={styles.cardButton}
-									onClick={() => setSelectedProduct(item)}
-								>
-									VER PRODUCTO
-								</button>
-							)}
-						</div>
-					) : (
-						" "
-					),
-				)}
+			<h2 className={styles.categoryTitle}>{title}</h2>
+			<div className={styles.cardsContainer}>
+				{filtered.map((item) => (
+					<Card key={item.id} item={item} onSelect={onSelect} />
+				))}
 			</div>
-
-			{selectedProduct && (
-				<div className={styles.modal} onClick={() => setSelectedProduct(null)}>
-					<div
-						className={styles.modalContent}
-						onClick={(e) => e.stopPropagation()}
-					>
-						<span
-							className={styles.closeButton}
-							onClick={() => setSelectedProduct(null)}
-						>
-							&times;
-						</span>
-
-						<div className={styles.imgContainer}>
-							{selectedProduct.images.map((img) => (
-								<img src={img} />
-							))}
-						</div>
-						<h2>{selectedProduct.name}</h2>
-
-						<div className={styles.characteristics}>
-							<p>{selectedProduct.characteristics}</p>
-						</div>
-
-						<div className={styles.modalPriceMeasure}>
-							<p>Precio: $ {selectedProduct.price}</p>
-							<p className={styles.measures}>{selectedProduct.measures}</p>
-						</div>
-
-						<div className={styles.modalPurchase}>
-							<p>Para comprar: </p>
-							<a
-								href="https://wa.me/541150609490"
-								target="_blank"
-								rel="noopener noreferrer"
-								className={styles.cardButton}
-							>
-								CONSULTAR POR WHATSAPP
-							</a>
-						</div>
-					</div>
-				</div>
-			)}
 		</>
 	);
 };
 
 const CardsContainer = ({ bags }) => {
-	return (
-		<>
-			<section id="products" className={styles.products}>
-				<h2>Carteras</h2>
-				<Card bags={bags} category="cartera" />
+	const [selectedProduct, setSelectedProduct] = useState(null);
 
-				<h2>Mochilas</h2>
-				<Card bags={bags} category="mochila" />
-			</section>
-		</>
+	useLockBodyScroll(!!selectedProduct);
+
+	return (
+		<section id="products" className={styles.products}>
+			<CategorySection
+				title="Carteras"
+				bags={bags}
+				category="cartera"
+				onSelect={setSelectedProduct}
+			/>
+			<CategorySection
+				title="Mochilas"
+				bags={bags}
+				category="mochila"
+				onSelect={setSelectedProduct}
+			/>
+
+			<Modal
+				key={selectedProduct?.id}
+				product={selectedProduct}
+				onClose={() => setSelectedProduct(null)}
+			/>
+		</section>
 	);
 };
 
